@@ -9,6 +9,7 @@
             var util = require('util');
             var fs = require('fs');
             var _ = require('lodash');
+            var cleaner = require('node-textcleaner');
         }
     else 
         throw new Error('Node-Ngram requires lodash');
@@ -74,7 +75,7 @@
             if (filter !== undefined) {
                 return filter.call(s, word);
             }
-            return cleanup(word).toLowerCase();
+            return cleaner(word).toLowerCase();
         });
     };
 
