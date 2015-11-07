@@ -7,19 +7,13 @@
     if (typeof _ === 'undefined') {
         if (has_require) {
             var util = require('util');
-            var fs = require('fs');
             var _ = require('lodash');
             var cleaner = require('node-textcleaner');
+            var Tokenizer = require('node-vntokenizer');
+			var token = new Tokenizer();
         }
     else 
         throw new Error('Node-Ngram requires lodash');
-    }
-
-
-
-
-    function cleanup(text) {
-        return text.replace(/(^[\\("']+)|([,:;.?!)"'|\\]+$)/, '').toLowerCase();
     }
 
     var Ngrams = function(options) {
@@ -35,7 +29,7 @@
      */
     Ngrams.prototype.ngram = function(sentences, n) {
         if (typeof sentences === 'string')
-            var words = sentences.tokens();
+            var words = this._tokens(sentences);
         else if (typeof sentences === 'array')
             var words = sentences; // Is array
         else 
@@ -69,15 +63,17 @@
         return this.ngram(sentences, 2);
     }
 
-    String.prototype.tokens = function(filter) {
-        var s = this;
-        return this.split(/\s+/).map(function(word) {
-            if (filter !== undefined) {
+    /**
+     * Tokenizer strings
+     */
+    Ngrams.prototype._tokens = function(s, filter) {
+		return token.tokenize(s).map(function(word) {
+        	if (filter !== undefined) {
                 return filter.call(s, word);
             }
             return cleaner(word).toLowerCase();
         });
-    };
+    }
 
     // Exports
     if( typeof exports !== 'undefined' ) {
