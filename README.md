@@ -2,6 +2,9 @@
 
 Ngram for Nodejs.
 
+<img src="https://img.shields.io/github/forks/duyetdev/node-ngram.svg" />
+<img src="https://img.shields.io/twitter/url/https/github.com/duyetdev/node-ngram.svg?style=social" />
+
 # Instalation 
 
 ```sh
