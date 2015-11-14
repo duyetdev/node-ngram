@@ -2,6 +2,8 @@
 
 Ngram for Nodejs.
 
+[![NPM](https://nodei.co/npm/node-ngram.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/node-ngram/)
+
 <img src="https://img.shields.io/github/forks/duyetdev/node-ngram.svg" />
 <img src="https://img.shields.io/twitter/url/https/github.com/duyetdev/node-ngram.svg?style=social" />
 
