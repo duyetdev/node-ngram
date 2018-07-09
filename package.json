@@ -4,7 +4,9 @@
   "description": "Nodejs text n-grams",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha"
+    "test": "./node_modules/mocha/bin/mocha",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -24,11 +26,13 @@
   },
   "homepage": "https://github.com/duyetdev/node-ngram#readme",
   "dependencies": {
-    "lodash": "^3.10.1",
+    "lodash": "^4.17.5",
     "node-textcleaner": "0.0.1",
-    "node-vntokenizer": "0.0.1"
+    "node-vntokenizer": "0.0.1",
+    "snyk": "^1.88.2"
   },
   "devDependencies": {
     "mocha": "^2.3.3"
-  }
+  },
+  "snyk": true
 }
