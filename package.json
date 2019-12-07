@@ -26,7 +26,7 @@
   "dependencies": {
     "lodash": "^3.10.1",
     "node-textcleaner": "0.0.1",
-    "node-vntokenizer": "0.0.1"
+    "node-vntokenizer": "0.0.2"
   },
   "devDependencies": {
     "mocha": "^2.3.3"
