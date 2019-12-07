@@ -4,7 +4,9 @@
   "description": "Nodejs text n-grams",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha"
+    "test": "./node_modules/mocha/bin/mocha",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -26,12 +28,14 @@
   "dependencies": {
     "lodash": "^4.0.0",
     "node-textcleaner": "0.0.1",
-    "node-vntokenizer": "0.0.2"
+    "node-vntokenizer": "0.0.2",
+    "snyk": "^1.258.1"
   },
   "devDependencies": {
     "mocha": "6.2.2"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
-  }
+  },
+  "snyk": true
 }
