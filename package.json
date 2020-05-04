@@ -29,7 +29,7 @@
     "lodash": "^4.17.12",
     "node-textcleaner": "0.0.1",
     "node-vntokenizer": "0.0.2",
-    "snyk": "^1.258.1"
+    "snyk": "^1.317.0"
   },
   "devDependencies": {
     "mocha": "7.1.2"
