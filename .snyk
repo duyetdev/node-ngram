@@ -1,8 +1,11 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.14.0
+version: v1.14.1
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:lodash:20180130':
     - node-vntokenizer > lodash:
         patched: '2019-12-07T18:05:49.323Z'
+  SNYK-JS-LODASH-567746:
+    - lodash:
+        patched: '2020-05-04T01:07:54.590Z'
